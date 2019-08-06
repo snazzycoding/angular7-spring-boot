@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        <div class="row">
+          <div class="col-md-11 header-content">
+            List
+          </div>
+          <div class="col-md-1">
+            <nb-actions size="medium" [class.right]="true">
+              <nb-action icon="nb-plus" class="toggle-layout" (click)="addTask()"></nb-action>
+            </nb-actions>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div *ngFor="let next of (tasks | async)" class="row show-grid grid-table">
+          <div class="col-md-12">
+            <app-todo-entry [task]="next" (refresh)="refresh()"></app-todo-entry>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

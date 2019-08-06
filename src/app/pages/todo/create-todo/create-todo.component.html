@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        <div class="row">
+          <div class="col-md-11 header-content">
+            Add Todo
+          </div>
+          <div class="col-md-1">
+            <nb-actions size="medium" [class.right]="true">
+              <nb-action icon="nb-arrow-left" class="toggle-layout" (click)="showList()"></nb-action>
+            </nb-actions>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="container h-100">
+          <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-11">
+                    <input type="text" class="form-control" id="task" placeholder="task" [(ngModel)]="task">
+                  </div>
+                  <div class="col-1">
+                    <button type="button" class="btn btn-info btn-rectangle" (click)="createTask()">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

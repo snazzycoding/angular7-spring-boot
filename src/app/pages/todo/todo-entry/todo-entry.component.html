@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-11">
+    {{task.task}}
+  </div>
+  <div class="col-md-1">
+    <nb-actions [class.right]="true">
+      <nb-action icon="nb-trash" (click)="deleteTask()"></nb-action>
+    </nb-actions>
+  </div>
+</div>
